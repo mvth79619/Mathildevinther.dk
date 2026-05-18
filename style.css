@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 
@@ -27,27 +28,32 @@
    GENERELT
 ----------------------------- */
 
-html {
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--Stone);
   font-family: 'Montserrat', sans-serif;
-  color: var(--mork);
-  overflow-x: hidden; /* ← DEN ENESTE ÆNDRING */
+  color: var(--Dark-brown);
 }
 
 img,
-video {
+video,
+iframe {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
 
 section,
-main {
-  width: 100%;
+main,
+div {
+  max-width: 100%;
 }
 
 a {
@@ -171,7 +177,6 @@ nav {
 .hero-billede {
   display: flex;
   justify-content: center;
-
   order: -1;
 }
 
@@ -493,7 +498,6 @@ nav {
 .projekt-video {
   width: 100%;
   max-width: 1100px;
-  margin-bottom: 100px;
 
   margin: 0 auto 50px;
 }
@@ -503,7 +507,6 @@ nav {
   max-width: 900px;
 
   margin: 0 auto;
-  
 }
 
 .projekt-video img {
@@ -514,7 +517,6 @@ video.rituals-video {
   width: 100%;
   max-width: 340px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .projekt-tekst {
@@ -566,6 +568,7 @@ video.rituals-video {
 
   margin-bottom: 8px;
 }
+
 .projekt-billede-wrapper img {
   max-width: 520px;
 }
@@ -738,7 +741,6 @@ footer {
   .highlights-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
 
   .om-billeder {
     grid-template-columns: 1fr 1fr;
