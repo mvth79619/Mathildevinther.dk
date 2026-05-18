@@ -1,222 +1,782 @@
-<!DOCTYPE html>
-<html lang="da">
+/* -----------------------------
+   FARVER
+----------------------------- */
+
+:root {
+  --Stone: #f5f2ed;
+  --Cocoa: #8B5E3C;
+  --Dark-brown: #5E4A3E;
+  --Dusty-coral: #E07A5F;
+  --Sand: #E6DDD2;
+  --Cocoa-Clay: #7a7060;
+}
+
+
+/* -----------------------------
+   RESET
+----------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* -----------------------------
+   GENERELT
+----------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--Stone);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--mork);
+  overflow-x: hidden;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section,
+main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* -----------------------------
+   TYPOGRAFI
+----------------------------- */
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.tagline {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--Cocoa);
+  margin-bottom: 12px;
+}
+
+.citat {
+  font-style: italic;
+  color: var(--Cocoa);
+}
+
+
+/* -----------------------------
+   NAVIGATION
+----------------------------- */
 
-<head>
+nav {
+  background-color: var(--Sand);
+  border-bottom: 1px solid #ddd6cd;
 
-    <!-- META -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
-    <!-- TITLE -->
-    <title>Videoprojekt | Mathilde Vinther</title>
+  padding: 16px 20px;
+}
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.nav-logo img {
+  height: 50px;
+  width: auto;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+.nav-links a {
+  color: var(--Dark-brown);
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
 
-</head>
+.nav-links a:hover {
+  color: var(--Dusty-coral);
+}
 
-<body>
 
-    <!-- ========================================
-    NAVIGATION
-    ========================================= -->
+/* -----------------------------
+   HERO
+----------------------------- */
 
-    <nav>
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
 
-        <!-- Logo -->
-        <a href="index.html" class="nav-logo">
-            <img src="logo-MV.png" alt="Mathilde Vinther logo">
-        </a>
+  padding: 60px 20px;
 
-        <!-- Menu -->
-        <ul class="nav-links">
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
 
-            <li>
-                <a href="om-mig.html">Om mig</a>
-            </li>
+  align-items: center;
+}
 
-            <li>
-                <a href="projekter.html">Projekter</a>
-            </li>
+.hero-tekst {
+  max-width: 580px;
+}
 
-            <li>
-                <a href="kontakt.html">Kontakt</a>
-            </li>
+.hero-tekst h1 {
+  margin-bottom: 20px;
+}
 
-        </ul>
+.hero-tekst p {
+  margin-bottom: 14px;
+}
 
-    </nav>
+.hero-billede {
+  display: flex;
+  justify-content: center;
 
-    <!-- ========================================
-    PROJEKT SIDE
-    ========================================= -->
+  order: -1;
+}
 
-    <section class="projekt-side">
+.hero-billede img {
+  width: 100%;
+  max-width: 520px;
+}
 
-        <!-- Intro -->
-        <div class="projekt-intro">
 
-            <p class="tagline">
-                Video
-            </p>
+/* -----------------------------
+   HIGHLIGHTS
+----------------------------- */
 
-            <h1>
-                Videoproduktion og redigering
-            </h1>
+.projekter {
+  padding: 40px 20px 70px;
+}
 
-            <p class="projekt-beskrivelse">
-                Et kreativt videoprojekt udviklet med fokus på storytelling, branding, stemning og visuel identitet.
-            </p>
+.projekter h2 {
+  text-align: center;
 
-        </div>
+  font-size: 12px;
 
-        <!-- Video overskrift -->
-        <div class="projekt-tekst video-overskrift">
+  letter-spacing: 3px;
+  text-transform: uppercase;
 
-            <h2>
-                Færdig video
-            </h2>
+  margin-bottom: 28px;
+}
 
-        </div>
+.highlights-grid {
+  max-width: 1400px;
+  margin: 0 auto;
 
-        <!-- Video -->
-        <div class="projekt-video">
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-          <video controls>
-                <source src="Rituals2.mp4" type="video/mp4">
-            </video>
-            
-        </div>
+  gap: 8px;
+}
 
-        <!-- Projekt tekst -->
-        <div class="projekt-tekst">
+.highlights-billede {
+  overflow: hidden;
+}
 
-            <h2>
-                Om projektet
-            </h2>
+.highlights-billede img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
 
-            <p>
-                Formålet med projektet var at udvikle en stemningsfuld produktvideo inspireret af Rituals’ rolige og eksklusive brandunivers.
-            </p>
+  object-fit: cover;
 
-            <p>
-                Videoen blev produceret med fokus på visuel storytelling, branding og brugeroplevelse med et udtryk, der kunne fungere som en moderne reklamefilm.
-            </p>
+  transition: 0.3s ease;
+}
 
-            <p>
-                I processen arbejdede jeg med lys, komposition, kameravinkler og lyd for at skabe en rolig og spa-inspireret stemning.
-            </p>
+.highlights-billede:hover img {
+  transform: scale(1.03);
+}
 
-            <p>
-                Projektet blev optaget med iPhone, hvilket krævede kreativ planlægning i forhold til styling, opsætning og lysforhold.
-            </p>
 
-            <p>
-                Efterfølgende blev videoen redigeret i Adobe Premiere Pro, hvor jeg arbejdede med farvejustering, klipning, lyddesign og stemningsopbygning for at skabe det endelige resultat.
-            </p>
+/* -----------------------------
+   KNAPPER
+----------------------------- */
 
-            <p>
-                Projektet har styrket mine kompetencer inden for videoproduktion, storytelling, branding og digital content creation.
-            </p>
+.se-flere-wrapper,
+.tilbage-wrapper {
+  text-align: center;
+  margin-top: 36px;
+}
 
-        </div>
+.se-flere,
+.kontakt-knap,
+.kontakt-btn,
+.tilbage-link {
+  display: inline-block;
 
-        <!-- Info bokse -->
-        <div class="projekt-info">
+  padding: 14px 28px;
 
-            <!-- Program -->
-            <div class="info-boks">
+  border: 1px solid var(--Dusty-coral);
 
-                <h2>
-                    Program
-                </h2>
+  background-color: transparent;
+  color: var(--Dusty-coral);
 
-                <p>
-                    Adobe Premiere Pro
-                </p>
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 
-            </div>
+  transition: 0.3s ease;
+}
 
-            <!-- Fokus -->
-            <div class="info-boks">
+.se-flere:hover,
+.tilbage-link:hover {
+  background-color: var(--Dusty-coral);
+  color: white;
+}
 
-                <h2>
-                    Fokus
-                </h2>
+.kontakt-knap,
+.kontakt-btn {
+  background-color: var(--Dusty-coral);
+  color: white;
+}
 
-                <p>
-                    Videoredigering, storytelling og visuel identitet.
-                </p>
+.kontakt-knap:hover,
+.kontakt-btn:hover {
+  opacity: 0.85;
+}
 
-            </div>
 
-        </div>
+/* -----------------------------
+   OM MIG
+----------------------------- */
 
-        <!-- Tilbage -->
-        <div class="tilbage-wrapper">
+.om-mig {
+  max-width: 1400px;
+  margin: 0 auto;
 
-            <a href="projekter.html" class="tilbage-link">
-                ← Tilbage til projekter
-            </a>
+  padding: 60px 20px 90px;
+}
 
-        </div>
+.om-grid {
+  display: grid;
+  gap: 50px;
+}
 
-    </section>
+.om-tekst {
+  width: 100%;
+}
 
-    <!-- ========================================
-    FOOTER
-    ========================================= -->
+.om-tekst h1 {
+  margin-bottom: 20px;
+}
 
-    <footer>
+.om-tekst p {
+  margin-bottom: 14px;
+}
 
-        <!-- CTA -->
-        <div class="footer-cta">
+.om-billeder {
+  width: 100%;
+  max-width: 1000px;
 
-            <p>
-                Skal vi samarbejde?
-            </p>
+  margin: 40px auto 0;
 
-            <a href="kontakt.html" class="kontakt-knap">
-                Kontakt mig
-            </a>
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-        </div>
+  gap: 14px;
+}
 
-        <!-- Footer bund -->
-        <div class="footer-bund">
+.om-billede {
+  width: 100%;
 
-            <div class="footer-info">
-                <p>Mathilde Vinther</p>
-                <p>Mobil: +45 29 87 13 18</p>
-                <p>Mail: mathildevinther.t@gmail.com</p>
-            </div>
+  aspect-ratio: 4 / 5;
 
-            <ul class="footer-links">
+  object-fit: cover;
+}
 
-                <li>
-                    <a href="om-mig.html">Om mig</a>
-                </li>
 
-                <li>
-                    <a href="projekter.html">Projekter</a>
-                </li>
+/* -----------------------------
+   VÆRKTØJSKASSE
+----------------------------- */
 
-                <li>
-                    <a href="kontakt.html">Kontakt</a>
-                </li>
+.vaerktoejskasse {
+  max-width: 1400px;
+  margin: 0 auto;
 
-            </ul>
+  padding: 0 20px 80px;
+}
 
-        </div>
+.vaerktoejskasse h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-    </footer>
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-</body>
+  gap: 30px;
 
-</html>
+  justify-items: center;
+}
+
+.tool-kort img {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  transition: 0.3s ease;
+}
+
+.tool-kort img:hover {
+  transform: translateY(-5px);
+}
+
+
+/* -----------------------------
+   PROJEKTER SIDE
+----------------------------- */
+
+.projekter-side {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 60px 20px 90px;
+}
+
+.projekter-intro {
+  max-width: 580px;
+  margin-bottom: 50px;
+}
+
+.projekter-intro h1 {
+  margin-bottom: 20px;
+}
+
+.projekter-intro p {
+  margin-bottom: 14px;
+}
+
+.projekt-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 40px 24px;
+}
+
+.projekt-kort {
+  display: flex;
+  flex-direction: column;
+}
+
+.projekt-kort img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  margin-bottom: 18px;
+
+  transition: 0.3s ease;
+}
+
+.projekt-indhold {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projekt-kort h2 {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.projekt-kort p {
+  margin-bottom: 6px;
+}
+
+.projekt-link {
+  color: var(--Dusty-coral);
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* -----------------------------
+   PROJEKT DETALJE SIDE
+----------------------------- */
+
+.projekt-side {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 40px 20px 50px;
+}
+
+.projekt-intro {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto 65px;
+}
+
+.projekt-kategori {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: var(--Cocoa);
+
+  margin-bottom: 12px;
+}
+
+.projekt-intro h1 {
+  font-size: 56px;
+  margin-bottom: 18px;
+}
+
+.projekt-beskrivelse {
+  max-width: 900px;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.video-overskrift {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.video-overskrift h2 {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.1;
+
+  margin: 0;
+}
+
+.projekt-video {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 100px;
+
+  margin: 0 auto 50px;
+}
+
+.projekt-video video {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+  
+}
+
+.projekt-video img {
+  width: 100%;
+}
+
+video.rituals-video {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.projekt-tekst {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 80px auto 70px;
+}
+
+.projekt-tekst h2 {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.projekt-tekst p {
+  font-size: 16px;
+  line-height: 1.9;
+
+  margin-bottom: 22px;
+}
+
+.projekt-info {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto 60px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 30px;
+}
+
+.info-boks {
+  padding-top: 16px;
+  border-top: 1px solid #d8d1c8;
+}
+
+.info-boks h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.projekt-billede-wrapper h2 {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.1;
+
+  margin-bottom: 8px;
+}
+.projekt-billede-wrapper img {
+  max-width: 520px;
+}
+
+.projekt-billede-wrapper {
+  justify-items: center;
+}
+
+.video-overskrift h2 {
+  font-size: 16px;
+  font-family: Playfair Display, serif;
+}
+
+.beauty-grid {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto 60px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 18px;
+}
+
+.beauty-billede {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.beauty-billede img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+
+/* -----------------------------
+   KONTAKT
+----------------------------- */
+
+.kontakt-side {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 60px 20px 80px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+
+  align-items: center;
+}
+
+.kontakt-tekst {
+  max-width: 580px;
+}
+
+.kontakt-tekst h1 {
+  margin-bottom: 20px;
+}
+
+.kontakt-tekst p {
+  margin-bottom: 14px;
+}
+
+.kontakt-knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.kontakt-billede {
+  display: flex;
+  justify-content: center;
+}
+
+.kontakt-billede img {
+  width: 100%;
+  max-width: 420px;
+}
+
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+
+footer {
+  margin-top: 60px;
+
+  background-color: var(--Cocoa-Clay);
+  color: #f5f2ed;
+
+  padding: 50px 20px 30px;
+}
+
+.footer-cta {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.footer-cta p {
+  margin-bottom: 16px;
+
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-bund {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  text-align: center;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #f5f2ed;
+}
+
+
+/* -----------------------------
+   TABLET
+----------------------------- */
+
+@media (min-width: 768px) {
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero,
+  .kontakt-side {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+  }
+
+  .hero {
+    padding: 70px 40px;
+  }
+
+  .hero-billede {
+    order: 0;
+  }
+
+  .om-mig,
+  .projekter-side,
+  .kontakt-side,
+  .vaerktoejskasse,
+  .projekt-side {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .om-billeder {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projekt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projekt-info,
+  .projekt-billede-wrapper,
+  .beauty-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tool-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+  }
+
+  .footer-bund {
+    flex-direction: row;
+    justify-content: space-between;
+
+    text-align: left;
+  }
+
+}
+
+
+/* -----------------------------
+   DESKTOP
+----------------------------- */
+
+@media (min-width: 1100px) {
+
+  .projekt-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
