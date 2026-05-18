@@ -171,7 +171,6 @@ nav {
 .hero-billede {
   display: flex;
   justify-content: center;
-
   order: -1;
 }
 
@@ -318,9 +317,7 @@ nav {
 
 .om-billede {
   width: 100%;
-
   aspect-ratio: 4 / 5;
-
   object-fit: cover;
 }
 
@@ -380,8 +377,9 @@ nav {
   margin-bottom: 50px;
 }
 
+/* MOBILE FIRST */
 .projekter-intro h1 {
-  font-size: 56px;
+  font-size: 42px;
   line-height: 1.1;
   margin-bottom: 20px;
 }
@@ -466,8 +464,9 @@ nav {
   margin-bottom: 12px;
 }
 
+/* MOBILE FIRST */
 .projekt-intro h1 {
-  font-size: 56px;
+  font-size: 42px;
   line-height: 1.1;
   margin-bottom: 18px;
 }
@@ -705,6 +704,11 @@ footer {
 
 @media (min-width: 768px) {
 
+  .projekter-intro h1,
+  .projekt-intro h1 {
+    font-size: 56px;
+  }
+
   nav {
     flex-direction: row;
     justify-content: space-between;
@@ -777,20 +781,6 @@ footer {
 
   .projekt-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-}
-
-
-/* -----------------------------
-   MOBILE
------------------------------ */
-
-@media (max-width: 767px) {
-
-  .projekter-intro h1,
-  .projekt-intro h1 {
-    font-size: 42px;
   }
 
 }
