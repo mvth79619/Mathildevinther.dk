@@ -27,20 +27,23 @@
    GENERELT
 ----------------------------- */
 
-html {
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--Stone);
   font-family: 'Montserrat', sans-serif;
-  color: var(--mork);
-  overflow-x: hidden;
+  color: var(--Dark-brown);
 }
 
 img,
 video {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -48,6 +51,7 @@ video {
 section,
 main {
   width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -71,12 +75,12 @@ h3 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.1;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.2;
 }
 
@@ -147,7 +151,7 @@ nav {
   max-width: 1400px;
   margin: 0 auto;
 
-  padding: 60px 20px;
+  padding: 50px 20px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -171,7 +175,6 @@ nav {
 .hero-billede {
   display: flex;
   justify-content: center;
-
   order: -1;
 }
 
@@ -186,17 +189,14 @@ nav {
 ----------------------------- */
 
 .projekter {
-  padding: 40px 20px 70px;
+  padding: 40px 20px 60px;
 }
 
 .projekter h2 {
   text-align: center;
-
   font-size: 12px;
-
   letter-spacing: 3px;
   text-transform: uppercase;
-
   margin-bottom: 28px;
 }
 
@@ -205,9 +205,8 @@ nav {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 8px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 .highlights-billede {
@@ -217,9 +216,7 @@ nav {
 .highlights-billede img {
   width: 100%;
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
-
   transition: 0.3s ease;
 }
 
@@ -277,166 +274,6 @@ nav {
 
 
 /* -----------------------------
-   OM MIG
------------------------------ */
-
-.om-mig {
-  max-width: 1400px;
-  margin: 0 auto;
-
-  padding: 60px 20px 90px;
-}
-
-.om-grid {
-  display: grid;
-  gap: 50px;
-}
-
-.om-tekst {
-  width: 100%;
-}
-
-.om-tekst h1 {
-  margin-bottom: 20px;
-}
-
-.om-tekst p {
-  margin-bottom: 14px;
-}
-
-.om-billeder {
-  width: 100%;
-  max-width: 1000px;
-
-  margin: 40px auto 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 14px;
-}
-
-.om-billede {
-  width: 100%;
-
-  aspect-ratio: 4 / 5;
-
-  object-fit: cover;
-}
-
-
-/* -----------------------------
-   VÆRKTØJSKASSE
------------------------------ */
-
-.vaerktoejskasse {
-  max-width: 1400px;
-  margin: 0 auto;
-
-  padding: 0 20px 80px;
-}
-
-.vaerktoejskasse h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.tool-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 30px;
-
-  justify-items: center;
-}
-
-.tool-kort img {
-  width: 58px;
-  height: 58px;
-
-  object-fit: contain;
-
-  transition: 0.3s ease;
-}
-
-.tool-kort img:hover {
-  transform: translateY(-5px);
-}
-
-
-/* -----------------------------
-   PROJEKTER SIDE
------------------------------ */
-
-.projekter-side {
-  max-width: 1400px;
-  margin: 0 auto;
-
-  padding: 60px 20px 90px;
-}
-
-.projekter-intro {
-  max-width: 580px;
-  margin-bottom: 50px;
-}
-
-.projekter-intro h1 {
-  margin-bottom: 20px;
-}
-
-.projekter-intro p {
-  margin-bottom: 14px;
-}
-
-.projekt-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  gap: 40px 24px;
-}
-
-.projekt-kort {
-  display: flex;
-  flex-direction: column;
-}
-
-.projekt-kort img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-
-  object-fit: cover;
-
-  margin-bottom: 18px;
-
-  transition: 0.3s ease;
-}
-
-.projekt-indhold {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.projekt-kort h2 {
-  font-size: 18px;
-  line-height: 1.3;
-  font-weight: 500;
-}
-
-.projekt-kort p {
-  margin-bottom: 6px;
-}
-
-.projekt-link {
-  color: var(--Dusty-coral);
-
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-
-/* -----------------------------
    PROJEKT DETALJE SIDE
 ----------------------------- */
 
@@ -444,14 +281,16 @@ nav {
   max-width: 1400px;
   margin: 0 auto;
 
-  padding: 40px 20px 50px;
+  padding: 24px 16px 40px;
+
+  overflow-x: hidden;
 }
 
 .projekt-intro {
   width: 100%;
   max-width: 1100px;
 
-  margin: 0 auto 65px;
+  margin: 0 auto 40px;
 }
 
 .projekt-kategori {
@@ -465,45 +304,43 @@ nav {
 }
 
 .projekt-intro h1 {
-  font-size: 56px;
+  font-size: 36px;
   margin-bottom: 18px;
+
+  word-break: break-word;
 }
 
 .projekt-beskrivelse {
   max-width: 900px;
 
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
 .video-overskrift {
   text-align: center;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .video-overskrift h2 {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
-  line-height: 1.1;
-
-  margin: 0;
 }
 
 .projekt-video {
   width: 100%;
   max-width: 1100px;
-  margin-bottom: 100px;
 
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
+
+  overflow: hidden;
 }
 
 .projekt-video video {
   width: 100%;
-  max-width: 900px;
-
+  max-width: 100%;
   margin: 0 auto;
-  
 }
 
 .projekt-video img {
@@ -513,7 +350,9 @@ nav {
 video.rituals-video {
   width: 100%;
   max-width: 340px;
+
   margin: 0 auto;
+
   overflow: hidden;
 }
 
@@ -521,31 +360,31 @@ video.rituals-video {
   width: 100%;
   max-width: 1100px;
 
-  margin: 80px auto 70px;
+  margin: 40px auto;
 }
 
 .projekt-tekst h2 {
-  font-size: 34px;
+  font-size: 28px;
   margin-bottom: 18px;
 }
 
 .projekt-tekst p {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.8;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .projekt-info {
   width: 100%;
   max-width: 1100px;
 
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
 
   display: grid;
   grid-template-columns: 1fr;
 
-  gap: 30px;
+  gap: 24px;
 }
 
 .info-boks {
@@ -558,32 +397,29 @@ video.rituals-video {
   margin-bottom: 8px;
 }
 
-.projekt-billede-wrapper h2 {
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  line-height: 1.1;
-
-  margin-bottom: 8px;
-}
-.projekt-billede-wrapper img {
-  max-width: 520px;
-}
-
 .projekt-billede-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
   justify-items: center;
 }
 
-.video-overskrift h2 {
+.projekt-billede-wrapper h2 {
   font-size: 16px;
-  font-family: Playfair Display, serif;
+  margin-bottom: 8px;
+}
+
+.projekt-billede-wrapper img {
+  width: 100%;
+  max-width: 520px;
 }
 
 .beauty-grid {
   width: 100%;
   max-width: 1100px;
 
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -601,55 +437,6 @@ video.rituals-video {
   height: 100%;
 
   object-fit: cover;
-  display: block;
-}
-
-
-/* -----------------------------
-   KONTAKT
------------------------------ */
-
-.kontakt-side {
-  max-width: 1400px;
-  margin: 0 auto;
-
-  padding: 60px 20px 80px;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
-
-  align-items: center;
-}
-
-.kontakt-tekst {
-  max-width: 580px;
-}
-
-.kontakt-tekst h1 {
-  margin-bottom: 20px;
-}
-
-.kontakt-tekst p {
-  margin-bottom: 14px;
-}
-
-.kontakt-knapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-
-  margin-top: 24px;
-}
-
-.kontakt-billede {
-  display: flex;
-  justify-content: center;
-}
-
-.kontakt-billede img {
-  width: 100%;
-  max-width: 420px;
 }
 
 
@@ -709,16 +496,10 @@ footer {
     justify-content: space-between;
   }
 
-  .hero,
-  .kontakt-side {
+  .hero {
     grid-template-columns: 1fr 1fr;
-
     gap: 70px;
 
-    align-items: center;
-  }
-
-  .hero {
     padding: 70px 40px;
   }
 
@@ -726,37 +507,30 @@ footer {
     order: 0;
   }
 
-  .om-mig,
-  .projekter-side,
-  .kontakt-side,
-  .vaerktoejskasse,
-  .projekt-side {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
   .highlights-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-
-  .om-billeder {
-    grid-template-columns: 1fr 1fr;
+  .projekt-side {
+    padding: 40px;
   }
 
-  .projekt-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .projekt-intro h1 {
+    font-size: 56px;
+  }
+
+  .projekt-tekst {
+    margin: 80px auto 70px;
+  }
+
+  .projekt-video {
+    margin: 0 auto 50px;
   }
 
   .projekt-info,
   .projekt-billede-wrapper,
   .beauty-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .tool-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 40px;
   }
 
   .footer-bund {
