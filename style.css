@@ -447,11 +447,10 @@ nav {
   padding: 40px 20px 50px;
 }
 
-.projekt-intro {
-  width: 100%;
-  max-width: 1100px;
-
-  margin: 0 auto 65px;
+.projekt-intro h1 {
+  font-size: 42px;
+  line-height: 1;
+  margin-bottom: 18px;
 }
 
 .projekt-kategori {
@@ -699,10 +698,14 @@ footer {
 
 @media (min-width: 768px) {
 
+
   nav {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .projekt-intro h1 {
+  font-size: 56px;
 
   .hero,
   .kontakt-side {
