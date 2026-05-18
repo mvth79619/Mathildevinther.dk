@@ -34,7 +34,7 @@ html {
 body {
   background-color: var(--Stone);
   font-family: 'Montserrat', sans-serif;
-  color: var(--mork);
+  color: var(--Dark-brown);
   overflow-x: hidden;
 }
 
@@ -381,6 +381,8 @@ nav {
 }
 
 .projekter-intro h1 {
+  font-size: 56px;
+  line-height: 1.1;
   margin-bottom: 20px;
 }
 
@@ -465,7 +467,8 @@ nav {
 }
 
 .projekt-intro h1 {
-  font-size: 20px;
+  font-size: 56px;
+  line-height: 1.1;
   margin-bottom: 18px;
 }
 
@@ -774,6 +777,20 @@ footer {
 
   .projekt-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* -----------------------------
+   MOBILE
+----------------------------- */
+
+@media (max-width: 767px) {
+
+  .projekter-intro h1,
+  .projekt-intro h1 {
+    font-size: 42px;
   }
 
 }
