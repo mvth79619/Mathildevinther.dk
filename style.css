@@ -4,10 +4,10 @@
 
 :root {
   --Stone: #f5f2ed;
+  --Sand: #E6DDD2;
   --Cocoa: #8B5E3C;
   --Dark-brown: #5E4A3E;
   --Dusty-coral: #E07A5F;
-  --Sand: #E6DDD2;
   --Cocoa-Clay: #7a7060;
 }
 
@@ -38,16 +38,16 @@ body {
   overflow-x: hidden;
 }
 
+section,
+main {
+  width: 100%;
+}
+
 img,
 video {
   width: 100%;
   height: auto;
   display: block;
-}
-
-section,
-main {
-  width: 100%;
 }
 
 a {
@@ -71,8 +71,10 @@ h3 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 42px;
   line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -122,9 +124,9 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 18px;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 18px;
 }
 
 .nav-links a {
@@ -160,10 +162,6 @@ nav {
   max-width: 580px;
 }
 
-.hero-tekst h1 {
-  margin-bottom: 20px;
-}
-
 .hero-tekst p {
   margin-bottom: 14px;
 }
@@ -171,11 +169,11 @@ nav {
 .hero-billede {
   display: flex;
   justify-content: center;
+
   order: -1;
 }
 
 .hero-billede img {
-  width: 100%;
   max-width: 520px;
 }
 
@@ -192,7 +190,6 @@ nav {
   text-align: center;
 
   font-size: 12px;
-
   letter-spacing: 3px;
   text-transform: uppercase;
 
@@ -214,9 +211,7 @@ nav {
 }
 
 .highlights-billede img {
-  width: 100%;
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
 
   transition: 0.3s ease;
@@ -291,32 +286,21 @@ nav {
   gap: 50px;
 }
 
-.om-tekst {
-  width: 100%;
-}
-
-.om-tekst h1 {
-  margin-bottom: 20px;
-}
-
 .om-tekst p {
   margin-bottom: 14px;
 }
 
 .om-billeder {
-  width: 100%;
   max-width: 1000px;
 
   margin: 40px auto 0;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 14px;
 }
 
 .om-billede {
-  width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
@@ -342,9 +326,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 30px;
-
   justify-items: center;
+  gap: 30px;
 }
 
 .tool-kort img {
@@ -377,13 +360,6 @@ nav {
   margin-bottom: 50px;
 }
 
-/* MOBILE FIRST */
-.projekter-intro h1 {
-  font-size: 42px;
-  line-height: 1.1;
-  margin-bottom: 20px;
-}
-
 .projekter-intro p {
   margin-bottom: 14px;
 }
@@ -401,9 +377,7 @@ nav {
 }
 
 .projekt-kort img {
-  width: 100%;
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
 
   margin-bottom: 18px;
@@ -420,7 +394,6 @@ nav {
 .projekt-kort h2 {
   font-size: 18px;
   line-height: 1.3;
-  font-weight: 500;
 }
 
 .projekt-kort p {
@@ -448,9 +421,7 @@ nav {
 }
 
 .projekt-intro {
-  width: 100%;
   max-width: 1100px;
-
   margin: 0 auto 65px;
 }
 
@@ -462,13 +433,6 @@ nav {
   color: var(--Cocoa);
 
   margin-bottom: 12px;
-}
-
-/* MOBILE FIRST */
-.projekt-intro h1 {
-  font-size: 42px;
-  line-height: 1.1;
-  margin-bottom: 18px;
 }
 
 .projekt-beskrivelse {
@@ -485,17 +449,13 @@ nav {
 
 .video-overskrift h2 {
   font-size: 20px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
   line-height: 1.1;
 
   margin: 0;
 }
 
 .projekt-video {
-  width: 100%;
   max-width: 1100px;
-
   margin: 0 auto 50px;
 }
 
@@ -513,11 +473,11 @@ nav {
 video.rituals-video {
   width: 100%;
   max-width: 340px;
+
   margin: 0 auto;
 }
 
 .projekt-tekst {
-  width: 100%;
   max-width: 1100px;
 
   margin: 80px auto 70px;
@@ -536,14 +496,12 @@ video.rituals-video {
 }
 
 .projekt-info {
-  width: 100%;
   max-width: 1100px;
 
   margin: 0 auto 60px;
 
   display: grid;
   grid-template-columns: 1fr;
-
   gap: 30px;
 }
 
@@ -557,37 +515,26 @@ video.rituals-video {
   margin-bottom: 8px;
 }
 
-.projekt-billede-wrapper h2 {
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  line-height: 1.1;
-
-  margin-bottom: 8px;
+.projekt-billede-wrapper {
+  justify-items: center;
 }
 
 .projekt-billede-wrapper img {
   max-width: 520px;
 }
 
-.projekt-billede-wrapper {
-  justify-items: center;
-}
-
-.video-overskrift h2 {
+.projekt-billede-wrapper h2 {
   font-size: 16px;
-  font-family: Playfair Display, serif;
+  margin-bottom: 8px;
 }
 
 .beauty-grid {
-  width: 100%;
   max-width: 1100px;
 
   margin: 0 auto 60px;
 
   display: grid;
   grid-template-columns: 1fr;
-
   gap: 18px;
 }
 
@@ -601,7 +548,6 @@ video.rituals-video {
   height: 100%;
 
   object-fit: cover;
-  display: block;
 }
 
 
@@ -626,10 +572,6 @@ video.rituals-video {
   max-width: 580px;
 }
 
-.kontakt-tekst h1 {
-  margin-bottom: 20px;
-}
-
 .kontakt-tekst p {
   margin-bottom: 14px;
 }
@@ -648,7 +590,6 @@ video.rituals-video {
 }
 
 .kontakt-billede img {
-  width: 100%;
   max-width: 420px;
 }
 
@@ -699,14 +640,15 @@ footer {
 
 
 /* -----------------------------
-   TABLET
+   TABLET + DESKTOP
 ----------------------------- */
 
 @media (min-width: 768px) {
 
-  .projekter-intro h1,
-  .projekt-intro h1 {
-    font-size: 56px;
+  h1 {
+    font-size: 64px;
+    line-height: 1.02;
+    letter-spacing: -2px;
   }
 
   nav {
@@ -717,10 +659,7 @@ footer {
   .hero,
   .kontakt-side {
     grid-template-columns: 1fr 1fr;
-
     gap: 70px;
-
-    align-items: center;
   }
 
   .hero {
@@ -733,19 +672,11 @@ footer {
 
   .om-mig,
   .projekter-side,
+  .projekt-side,
   .kontakt-side,
-  .vaerktoejskasse,
-  .projekt-side {
+  .vaerktoejskasse {
     padding-left: 40px;
     padding-right: 40px;
-  }
-
-  .highlights-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .om-billeder {
-    grid-template-columns: 1fr 1fr;
   }
 
   .projekt-grid {
@@ -753,7 +684,6 @@ footer {
   }
 
   .projekt-info,
-  .projekt-billede-wrapper,
   .beauty-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -772,8 +702,9 @@ footer {
 
 }
 
+
 /* -----------------------------
-   DESKTOP
+   LARGE DESKTOP
 ----------------------------- */
 
 @media (min-width: 1100px) {
