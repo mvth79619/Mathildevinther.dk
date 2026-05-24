@@ -148,7 +148,7 @@ nav {
 }
 
 .hero-tekst {
-  padding: 50px 20px;
+  padding: 30px 20px 10px;
   display: flex;
   flex-direction: column;
 }
@@ -195,7 +195,7 @@ nav {
 
 .hero-billede {
   overflow: hidden;
-  padding: 40px 60px;
+  padding: 50px 20px 0;
 
   display: flex;
   align-items: center;
@@ -213,7 +213,7 @@ nav {
 ----------------------------- */
 
 .projekter {
-  padding: 40px 20px 70px;
+  padding: 65px 20px 70px;
 }
 
 .projekter h2 {
@@ -689,8 +689,9 @@ footer {
   }
 
  .hero-billede img {
-  width: 85%;
-  height: auto;
+width: 92%;
+max-width: 620px;
+height: auto;
 
   object-fit: contain;
 }
@@ -724,7 +725,7 @@ footer {
 
   .tool-grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 40px;
+    gap: 10px;
   }
 
   .footer-bund {
@@ -743,7 +744,7 @@ footer {
 @media (min-width: 1100px) {
 
   .hero-tekst {
-    padding: 60px 50px;
+    padding: 40px 40px 20px;
   }
 
   .hero-tekst h1 {
