@@ -407,6 +407,7 @@ nav {
 .projekt-kort {
   display: flex;
   flex-direction: column;
+    box-shadow: 0 2px 12px rgba(122, 112, 96, 0.08);
 }
 
 .projekt-kort img {
@@ -645,7 +646,7 @@ footer {
   font-size: 20px;
   font-family: 'Playfair Display', serif;
 
-  transform: translateX(7px);
+  transform: translateX(4px);
 }
 
 .footer-bund {
