@@ -542,9 +542,7 @@ video.rituals-video {
 }
 
 .projekt-billede-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-items: center;
 }
 
 .projekt-billede-wrapper img {
@@ -634,7 +632,11 @@ footer {
 }
 
 .footer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+
   margin-bottom: 36px;
 }
 
@@ -643,6 +645,8 @@ footer {
 
   font-size: 20px;
   font-family: 'Playfair Display', serif;
+
+  transform: translateX(8px);
 }
 
 .footer-bund {
