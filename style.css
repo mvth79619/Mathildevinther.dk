@@ -544,6 +544,7 @@ video.rituals-video {
 .projekt-billede-wrapper {
   display: flex;
   flex-direction: column;
+   align-items: center;
 }
 
 .projekt-billede-wrapper img {
