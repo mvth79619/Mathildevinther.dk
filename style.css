@@ -544,7 +544,7 @@ video.rituals-video {
 .projekt-billede-wrapper {
   display: flex;
   flex-direction: column;
-   align-items: center;
+  align-items: center;
 }
 
 .projekt-billede-wrapper img {
@@ -772,10 +772,8 @@ height: auto;
 
 }
 
-
 .projekt-billede-wrapper {
   display: flex;
   flex-direction: column;
-   align-items: center;
-   imo !important
+  align-items: center !important;
 }
