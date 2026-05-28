@@ -771,3 +771,11 @@ height: auto;
   }
 
 }
+
+
+.projekt-billede-wrapper {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   imo !important
+}
